@@ -36,6 +36,13 @@ ul, ol {
     position: absolute;
 }
 
+
+.abc{
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
 .rel{
     position:relative;
 }
@@ -67,6 +74,9 @@ h1, h2, h3, h4, h5, h6 {
     color: #fff;
 }
 
+.cfff{
+    color: #fff;
+}
 .home-page .section .courses .block .dura{
   top: 75px;
   left: 20px;
@@ -83,13 +93,20 @@ h1, h2, h3, h4, h5, h6 {
 .s15{
     font-size: 15px;
 }
+.s18{
+    font-size: 18;
+}
 
 .s24{
-    font-size: 20;
+    font-size: 24;
 }
 
 .s28{
     font-size: 28;
+}
+
+.s38{
+    font-size: 38;
 }
 
 .fontn {
@@ -99,4 +116,6 @@ h1, h2, h3, h4, h5, h6 {
 .fontb{
     font-weight: bold;
 }
+ 
+.ibl{ display: inline-block;}
 

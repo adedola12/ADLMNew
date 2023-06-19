@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from "react";
 import logo from "../images/logo/1 (36).png";
+import { NavLink } from "react-router-dom";
 
 function Sidebar() {
   const [nav, setNav] = useState([
     { label: "Home", slug: "/", icon: "fa-house" },
     { label: "About", slug: "about", icon: "fa-address-card" },
     { label: "Categories", slug: "categories", icon: "fa-rectangle-list" },
-    { label: "My Courses", slug: "my-courses", icon: "fa-graduation-cap" },
+    { label: "My Courses", slug: "course", icon: "fa-graduation-cap" },
   ]);
 
   const [currentPage, setCurrentPage] = useState("/");
@@ -19,16 +20,10 @@ function Sidebar() {
   for (let i = 0; i < nav.length; i++) {
     navigation.push(
       <li key={"nav-" + i + "-" + nav[i].slug}>
-        <a
-          href={nav[i].slug}
-          className={
-            "aic link noul flex c333" +
-            (currentPage == nav[i].slug ? " on" : "")
-          }
-        >
+        <NavLink to={nav[i].slug} className={"aic link noul flex c333"}>
           <i class={"fa-solid s24 " + nav[i].icon} />
           <h2 className="label s24">{nav[i].label}</h2>
-        </a>
+        </NavLink>
       </li>
     );
   }
@@ -74,7 +69,7 @@ function Sidebar() {
               <h2 className="label s13 c777 point">points</h2>
             </div>
 
-            <div className="pro-item">
+            <div className="pro-item flex">
               <i class="fa-sharp fa-solid fa-battery-half bat" />
               <h2 className="val s15 fontb c333">45.3% </h2>
               <h2 className="label s13 c777 point">completed</h2>

@@ -1,24 +1,13 @@
-import React from 'react'; 
-import './css/App.css';
-import './css/props.css'
-
-import Header from './screens/header';
-import Sidebar from './screens/sidebar';
-import Home from './screens/home'
-import Rightbar from './screens/rightbar';
+import React from 'react'
+import AppRoot from './AppRoot'
+import AppLoader from './AppLoader'
 
 function App() {
   return (
-    <div className='App flex'>
-    <Sidebar />
-    <div className='app-content'>
-    <Home />
-    </div>
-    <Rightbar />
-    
-   
-    </div>
-  );
+    <AppRoot>
+      <AppLoader />
+    </AppRoot>
+  )
 }
 
-export default App;
+export default App
